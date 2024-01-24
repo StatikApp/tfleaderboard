@@ -2,7 +2,7 @@ name: Daily Leaderboard Update
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "55 5 * * *"
 
 jobs:
   update_leaderboard:
