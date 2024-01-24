@@ -1,5 +1,8 @@
 name: Daily Leaderboard Update
 
+on:
+  workflow_dispatch:
+
 jobs:
   update_leaderboard:
     runs-on: ubuntu-latest
