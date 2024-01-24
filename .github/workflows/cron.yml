@@ -1,9 +1,5 @@
 name: Daily Leaderboard Update
 
-on:
-  schedule:
-    - cron: "55 5 * * *"
-
 jobs:
   update_leaderboard:
     runs-on: ubuntu-latest
