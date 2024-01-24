@@ -9,7 +9,7 @@ jobs:
   update_leaderboard:
     runs-on: ubuntu-latest
     permissions:
-      contents: read, write
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
