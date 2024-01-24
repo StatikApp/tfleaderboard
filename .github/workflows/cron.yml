@@ -1,12 +1,15 @@
 name: Daily Leaderboard Update
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   update_leaderboard:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
