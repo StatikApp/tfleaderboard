@@ -30,6 +30,9 @@ jobs:
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git add leaderboard.json
+          git add leaderboard-crossplay.json
+          git add leaderboard-psn.json
+          git add leaderboard-steam.json
+          git add leaderboard-xbox.json
           git commit -m "Update leaderboard (automated)"
           git push
