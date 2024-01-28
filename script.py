@@ -1,22 +1,42 @@
-import json
 import requests
+import json
+import re
 
-response = requests.get('https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json')
+leaderboard_array = [
+    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-steam-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-xbox-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-psn-discovery-live.json"
+]
 
-data = response.json()
+for leaderboard_url in leaderboard_array:
+    # Extract the platform name using regular expression
+    match = re.search(r'leaderboard-(.*?)-discovery-live\.json', leaderboard_url)
+    if match:
+        platform = match.group(1)
+    else:
+        platform = "unknown"
 
-for entry in data:
-    entry['rank'] = entry.pop('r', None)
-    entry['fame'] = entry.pop('f', None)
-    entry['old_fame'] = entry.pop('of', None)
-    entry['old_rank'] = entry.pop('or', None)
-    entry['cashouts'] = entry.pop('c', None)
+    response = requests.get(leaderboard_url)
+    data = response.json()
 
-    entry['networks'] = {
-        'steam': entry.pop('steam', None),
-        'psn': entry.pop('psn', None),
-        'xbox': entry.pop('xbox', None)
-    }
+    for entry in data:
+        entry['rank'] = entry.pop('r', None)
+        entry['fame'] = entry.pop('f', None)
+        entry['old_fame'] = entry.pop('of', None)
+        entry['old_rank'] = entry.pop('or', None)
+        entry['cashouts'] = entry.pop('c', None)
 
-with open('leaderboard.json', 'w') as json_file:
-    json_file.write(json.dumps(data, indent=2))
+        entry['networks'] = {
+            'steam': entry.pop('steam', None),
+            'psn': entry.pop('psn', None),
+            'xbox': entry.pop('xbox', None)
+        }
+
+    # Construct the output file name
+    output_filename = f'leaderboard-{platform}.json'
+
+    with open(output_filename, 'w') as json_file:
+        json_file.write(json.dumps(data, indent=2))
+
+    print(f"Data for {platform} leaderboard saved to {output_filename}")
