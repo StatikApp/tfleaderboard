@@ -6,19 +6,19 @@ A free API for The Finals ranking data. You can find data such as rank, name, to
 
 Crossplay :
 
-> [https://soraclee.github.io/tfleaderboard/leaderboard-crossplay.json](https://soraclee.github.io/tfleaderboard/leaderboard-crossplay.json)
+> [https://statikapp.github.io/tfleaderboard/leaderboard-crossplay.json](https://soraclee.github.io/tfleaderboard/leaderboard-crossplay.json)
 
 Steam :
 
-> [https://soraclee.github.io/tfleaderboard/leaderboard-steam.json](https://soraclee.github.io/tfleaderboard/leaderboard-steam.json)
+> [https://statikapp.github.io/tfleaderboard/leaderboard-steam.json](https://soraclee.github.io/tfleaderboard/leaderboard-steam.json)
 
 Xbox :
 
-> [https://soraclee.github.io/tfleaderboard/leaderboard-xbox.json](https://soraclee.github.io/tfleaderboard/leaderboard-xbox.json)
+> [https://statikapp.github.io/tfleaderboard/leaderboard-xbox.json](https://soraclee.github.io/tfleaderboard/leaderboard-xbox.json)
 
 PlayStation :
 
-> [https://soraclee.github.io/tfleaderboard/leaderboard-psn.json](https://soraclee.github.io/tfleaderboard/leaderboard-psn.json)
+> [https://statikapp.github.io/tfleaderboard/leaderboard-psn.json](https://soraclee.github.io/tfleaderboard/leaderboard-psn.json)
 
 Returns the latest leaderboard data
 
