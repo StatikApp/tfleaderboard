@@ -4,7 +4,7 @@ A free API for The Finals ranking data. You can find data such as rank, name, to
 
 # API Endpoints
 
-Crossplay :
+All Platform (Crossplay) :
 
 > [https://statikapp.github.io/tfleaderboard/leaderboard-crossplay.json](https://soraclee.github.io/tfleaderboard/leaderboard-crossplay.json)
 
