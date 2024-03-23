@@ -3,10 +3,10 @@ import json
 import re
 
 leaderboard_array = [
-    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-crossplay-discovery-live.json",
-    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-steam-discovery-live.json",
-    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-xbox-discovery-live.json",
-    "https://storage.googleapis.com/embark-discovery-leaderboard/leaderboard-psn-discovery-live.json"
+    "https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-crossplay-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-steam-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-xbox-discovery-live.json",
+    "https://storage.googleapis.com/embark-discovery-leaderboard/s2-leaderboard-psn-discovery-live.json"
 ]
 
 for leaderboard_url in leaderboard_array:
